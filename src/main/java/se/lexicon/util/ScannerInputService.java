@@ -2,7 +2,7 @@ package se.lexicon.util;
 
 import java.util.Scanner;
 
-public class ScannerInputService implements UserInputService {
+public class ScannerInputService implements userInputServiceDao {
 
     Scanner scanner;
 

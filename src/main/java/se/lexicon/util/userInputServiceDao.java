@@ -1,6 +1,6 @@
 package se.lexicon.util;
 
-public interface UserInputService {
+public interface userInputServiceDao {
 
     String getString();
     int getInt();
