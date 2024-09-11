@@ -1,12 +1,13 @@
 package se.lexicon.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import se.lexicon.data_access.dao.StudentDao;
 import se.lexicon.model.Student;
 import se.lexicon.util.userInputServiceDao;
 
 import java.util.List;
-
+@Component
 public class StudentManagementConsoleImpl implements StudentManagementDao {
 
     private userInputServiceDao ScannerService;
