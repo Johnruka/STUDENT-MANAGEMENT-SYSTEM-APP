@@ -3,6 +3,7 @@ package se.lexicon.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import se.lexicon.Service.StudentManagementConsoleImpl;
 import se.lexicon.data_access.Impl.StudentDaoListImpl;
 import se.lexicon.util.ScannerInputService;
 
@@ -10,10 +11,23 @@ import se.lexicon.util.ScannerInputService;
 @ComponentScan(basePackages = "se.lexicon")
 public class ComponentScanConfig {
 
-    @Bean
-    public StudentDaoListImpl StudentDao() {
-        return new StudentDaoListImpl();
+    //@Bean
+   // public StudentDaoListImpl StudentDao() {
+       // return new StudentDaoListImpl();
     }
+   // @Bean
+    //public StudentManagementConsoleImpl StudentManagementDao() {
+        //return StudentManagementConsoleImpl;
+    //}
 
-    }
+//@Bean
+//public StudentManagementConsoleImpl StudentDao() {
+   // return StudentManagementConsoleImpl;
+//}
+
+//@Bean
+//public StudentManagementConsoleImpl UserInputServiceDao() {
+    //return StudentManagementConsoleImpl;
+//}
+
 
