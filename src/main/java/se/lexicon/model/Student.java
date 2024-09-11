@@ -1,5 +1,7 @@
 package se.lexicon.model;
 
+import java.util.UUID;
+
 public class Student {
 
     private int id;
@@ -10,7 +12,7 @@ public class Student {
     }
 
     public Student(int id, String name) {
-        this.id = id;
+        this.id = Integer.parseInt(UUID.randomUUID().toString());
         this.name = name;
     }
 
