@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>se.lexicon</groupId>
-  <artifactId>STUDENT-MANAGEMANT-SYSTEM-APP</artifactId>
+  <artifactId>STUDENT-MANAGEMENT-SYSTEM-APP</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
