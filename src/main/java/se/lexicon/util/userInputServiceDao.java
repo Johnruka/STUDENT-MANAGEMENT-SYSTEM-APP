@@ -2,6 +2,9 @@ package se.lexicon.util;
 
 public interface userInputServiceDao {
 
-    String getString();
+    static String getString() {
+        return null;
+    }
+
     int getInt();
 }
