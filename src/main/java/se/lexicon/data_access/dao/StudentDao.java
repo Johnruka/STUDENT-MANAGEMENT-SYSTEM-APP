@@ -7,7 +7,7 @@ import java.util.List;
 public interface StudentDao {
 
     Student save (Student student);
-    Student Find (int id);
+    static Student Find(int id);
     List<Student>findAll();
     Void delete(int id);
 }
