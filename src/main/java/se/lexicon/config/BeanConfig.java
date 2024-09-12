@@ -1,12 +1,15 @@
 package se.lexicon.config;
 
-import java.util.Scanner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+import java.util.Scanner;
+@Configuration
 public class BeanConfig {
 
-    Scanner scanner;
-
-    public BeanConfig(Scanner scanner) {
-        this.scanner = scanner;
+    @Bean
+    public Scanner scanner() {
+        return new Scanner(System.in);
+        
     }
 }
