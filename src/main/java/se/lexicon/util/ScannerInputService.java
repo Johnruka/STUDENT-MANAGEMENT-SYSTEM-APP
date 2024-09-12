@@ -9,18 +9,25 @@ import java.util.Scanner;
 public class ScannerInputService implements userInputServiceDao {
 
     Scanner scanner;
-@Autowired
+
+    @Autowired
     public ScannerInputService(Scanner scanner) {
+
         this.scanner = scanner;
+
     }
 
     @Override
     public String getString() {
-        return "";
+        System.out.println("Enter Student Name:");
+        return scanner.nextLine();
+
     }
 
     @Override
     public int getInt() {
-        return 0;
+        System.out.println("Enter Student ID:");
+        return scanner.nextInt();
+
     }
 }
