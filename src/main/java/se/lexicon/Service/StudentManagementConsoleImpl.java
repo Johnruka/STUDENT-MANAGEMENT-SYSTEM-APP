@@ -3,6 +3,7 @@ package se.lexicon.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import se.lexicon.data_access.dao.StudentDao;
+import se.lexicon.exception.StudentNotFoundException;
 import se.lexicon.model.Student;
 import se.lexicon.util.userInputServiceDao;
 
@@ -45,7 +46,8 @@ public class StudentManagementConsoleImpl implements StudentManagementDao {
             throw new IllegalArgumentException("IllegalArgumentException: Student Id cannot be zero or negative.");
         Optional<Student> studentOptional = Optional.ofNullable(StudentDao.Find(id));
         if(!studentOptional.isPresent())
-            throw new StudentException("StudentException: Student Id not found. Entered id: ", id);
+            throw new StudentNotFoundException();
+        new Exception();
         return studentOptional.get();
 
     }
