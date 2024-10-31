@@ -9,16 +9,12 @@ public interface StudentDao {
 
     Student save(Student student);
 
-    static Student Find(int id) {
-        return null;
-    }
-
-
-    Student Find(int id);
+    Student find(int id);
 
     List<Student> findAll();
 
-    Void delete(int id);
+    void delete(int id);
+
 }
 
 
