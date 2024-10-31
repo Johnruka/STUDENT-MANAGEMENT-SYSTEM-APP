@@ -44,7 +44,7 @@ public class StudentManagementConsoleImpl implements StudentManagementDao {
     public Student find(int id) {
         if(id <= 0)
             throw new IllegalArgumentException("IllegalArgumentException: Student Id cannot be zero or negative.");
-        Optional<Student> studentOptional = Optional.ofNullable(StudentDao.Find(id));
+        Optional<Student> studentOptional = Optional.ofNullable(studentDao.find(id));
         if(!studentOptional.isPresent())
             throw new StudentNotFoundException();
         new Exception();
