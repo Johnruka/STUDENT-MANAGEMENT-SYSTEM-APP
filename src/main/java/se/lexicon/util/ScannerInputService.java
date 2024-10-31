@@ -6,28 +6,24 @@ import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
 @Component
-public class ScannerInputService implements userInputServiceDao {
+public class ScannerInputService implements userInputService {
 
     Scanner scanner;
 
     @Autowired
     public ScannerInputService(Scanner scanner) {
-
+        System.out.println("Scanner object created...");
         this.scanner = scanner;
 
     }
 
     @Override
     public String getString() {
-        System.out.println("Enter Student Name:");
-        return scanner.nextLine();
-
+        return "";
     }
 
     @Override
     public int getInt() {
-        System.out.println("Enter Student ID:");
-        return scanner.nextInt();
-
+        return 0;
     }
 }

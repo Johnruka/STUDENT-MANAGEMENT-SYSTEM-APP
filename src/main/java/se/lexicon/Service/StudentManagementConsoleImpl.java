@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import se.lexicon.data_access.dao.StudentDao;
 import se.lexicon.exception.StudentNotFoundException;
 import se.lexicon.model.Student;
-import se.lexicon.util.userInputServiceDao;
+import se.lexicon.util.userInputService;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,19 +13,19 @@ import java.util.Optional;
 @Component
 public class StudentManagementConsoleImpl implements StudentManagementDao {
 
-    private userInputServiceDao scannerService;
+    private userInputService scannerService;
     private final StudentDao studentDao;
 
 
    @Autowired
-    public StudentManagementConsoleImpl(userInputServiceDao scannerService, StudentDao studentDao) {
+    public StudentManagementConsoleImpl(userInputService scannerService, StudentDao studentDao) {
        this.scannerService = scannerService;
        this.studentDao = studentDao;
     }
 
     @Override
     public Student create() {
-        String studentName = userInputServiceDao.getString();
+        String studentName = userInputService.class.getName();
         if(studentName == null || studentName.trim().isEmpty())
             throw new IllegalArgumentException("IllegalArgumentException: Student Name cannot be null or empty.");
         Student student = new Student(studentName);
